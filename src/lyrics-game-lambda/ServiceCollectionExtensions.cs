@@ -9,9 +9,10 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection ConfigureServices(this IServiceCollection serviceCollection)
     {
-        var path = "../songDB/songs.xlsx";
+        var path = "./songs.xlsx";
         var excelFile = new FileInfo(path);
         var excelPackage = new ExcelPackage(excelFile);
+        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         var excelPackageWrapper = new ExcelPackageWrapper(excelPackage);
         
         serviceCollection

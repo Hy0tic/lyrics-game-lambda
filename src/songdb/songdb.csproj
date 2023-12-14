@@ -10,10 +10,10 @@
       <PackageReference Include="EPPlus" Version="7.0.3" />
     </ItemGroup>
 
-    <ItemGroup>
+    <!-- <ItemGroup>
       <Content Include="./songs.xlsx">
         <CopyToOutputDirectory>always</CopyToOutputDirectory>
       </Content>
-    </ItemGroup>
+    </ItemGroup> -->
 
 </Project>
