@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8BBE0A0E-BCB7-490C-809A-FB1EB762AE4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lyrics-game-lambda", "src\lyrics-game-lambda\lyrics-game-lambda.csproj", "{9EEECDF3-AA5E-47B9-938B-23601B547098}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{035DE038-F6C0-4E2D-8139-2648620C6110}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lyrics-game-lambda.Tests", "test\lyrics-game-lambda.Tests\lyrics-game-lambda.Tests.csproj", "{08CF1AFD-6F60-452D-A662-8872B1DAFB88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EEECDF3-AA5E-47B9-938B-23601B547098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EEECDF3-AA5E-47B9-938B-23601B547098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EEECDF3-AA5E-47B9-938B-23601B547098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EEECDF3-AA5E-47B9-938B-23601B547098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08CF1AFD-6F60-452D-A662-8872B1DAFB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08CF1AFD-6F60-452D-A662-8872B1DAFB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08CF1AFD-6F60-452D-A662-8872B1DAFB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08CF1AFD-6F60-452D-A662-8872B1DAFB88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9EEECDF3-AA5E-47B9-938B-23601B547098} = {8BBE0A0E-BCB7-490C-809A-FB1EB762AE4D}
+		{08CF1AFD-6F60-452D-A662-8872B1DAFB88} = {035DE038-F6C0-4E2D-8139-2648620C6110}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6B124D8-7094-4FE1-A762-AAD0E6132D02}
+	EndGlobalSection
+EndGlobal
