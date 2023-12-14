@@ -1,0 +1,35 @@
+name: Deploy .NET Lambda Function
+
+on:
+  push:
+    branches:
+      - main  # Or your preferred branch
+      paths-ignore:
+        - '**.md'
+  workflow-dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6'
+
+    - name: Build and Package Lambda
+      run: |
+        dotnet restore
+        dotnet build --configuration Release
+        dotnet lambda package
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
