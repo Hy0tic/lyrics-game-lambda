@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="./songxlsx">
+      <Content Include="./songs.xlsx">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
