@@ -23,6 +23,7 @@ jobs:
 
     - name: Build and Package Lambda
       run: |
+        dotnet tool restore
         dotnet restore
         dotnet build --configuration Release
         dotnet lambda package
