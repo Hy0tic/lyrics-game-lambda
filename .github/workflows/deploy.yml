@@ -38,5 +38,5 @@ jobs:
 
     - name: Deploy to Lambda
       run: |
-        ~/.dotnet/tools/dotnet-lambda deploy-function lyrics-game-lambda --function-role "arn:aws:iam::915898657279:role/service-role/lyrics-game-lambda-role-5enu4vjm" --region ${{ secrets.AWS_REGION }}
+        dotnet lambda deploy-function lyrics-game-lambda --function-role "arn:aws:iam::915898657279:role/service-role/lyrics-game-lambda-role-5enu4vjm" --region ${{ secrets.AWS_REGION }}
   
