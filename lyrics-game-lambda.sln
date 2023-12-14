@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{035DE038-F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lyrics-game-lambda.Tests", "test\lyrics-game-lambda.Tests\lyrics-game-lambda.Tests.csproj", "{08CF1AFD-6F60-452D-A662-8872B1DAFB88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "songdb", "src\songdb\songdb.csproj", "{5620C241-B3C1-4D6C-B958-A2DBBA51AE01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{08CF1AFD-6F60-452D-A662-8872B1DAFB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08CF1AFD-6F60-452D-A662-8872B1DAFB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08CF1AFD-6F60-452D-A662-8872B1DAFB88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5620C241-B3C1-4D6C-B958-A2DBBA51AE01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5620C241-B3C1-4D6C-B958-A2DBBA51AE01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5620C241-B3C1-4D6C-B958-A2DBBA51AE01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5620C241-B3C1-4D6C-B958-A2DBBA51AE01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9EEECDF3-AA5E-47B9-938B-23601B547098} = {8BBE0A0E-BCB7-490C-809A-FB1EB762AE4D}
 		{08CF1AFD-6F60-452D-A662-8872B1DAFB88} = {035DE038-F6C0-4E2D-8139-2648620C6110}
+		{5620C241-B3C1-4D6C-B958-A2DBBA51AE01} = {8BBE0A0E-BCB7-490C-809A-FB1EB762AE4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D6B124D8-7094-4FE1-A762-AAD0E6132D02}
