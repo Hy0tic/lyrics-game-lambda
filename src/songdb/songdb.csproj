@@ -10,4 +10,10 @@
       <PackageReference Include="EPPlus" Version="7.0.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="./songxlsx">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
