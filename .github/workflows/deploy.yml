@@ -1,12 +1,12 @@
 name: Deploy .NET Lambda Function
 
 on:
-  push:
-    branches:
-      - main  # Or your preferred branch
+    push:
+      branches:
+        - main
       paths-ignore:
         - '**.md'
-  workflow-dispatch:
+    workflow_dispatch:
 
 jobs:
   deploy:
