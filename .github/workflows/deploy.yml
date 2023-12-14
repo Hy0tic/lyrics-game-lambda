@@ -26,6 +26,7 @@ jobs:
         dotnet tool restore
         dotnet restore
         dotnet build --configuration Release
+        cd src/lyrics-game-lambda
         dotnet lambda package
 
     - name: Configure AWS Credentials
