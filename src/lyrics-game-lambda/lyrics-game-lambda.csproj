@@ -21,9 +21,4 @@
     <ProjectReference Include="..\songdb\songdb.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="./songs.xlsx">
-      <CopyToOutputDirectory>always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 </Project>
