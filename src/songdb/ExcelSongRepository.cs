@@ -18,7 +18,7 @@ public class ExcelSongRepository
 
         var songTitle = RemoveContentInSquareBrackets(RemoveContentInParentheses(excelPackageWrapper.GetTitleAtRow(rowIndex)));
         var songAlbum = RemoveContentInSquareBrackets(RemoveContentInParentheses(excelPackageWrapper.GetAlbumAtRow(rowIndex)));
-        var songLyrics = RemoveContentInSquareBrackets(excelPackageWrapper.GetLyricsAtRow(rowIndex));
+        var songLyrics = GetRandomLyricSection(RemoveContentInSquareBrackets(excelPackageWrapper.GetLyricsAtRow(rowIndex)));
 
         var songResult = new Song(songTitle, songAlbum, songLyrics);
         return songResult;
@@ -42,6 +42,16 @@ public class ExcelSongRepository
     public string RemoveContentInSquareBrackets(string input)
     {
         return Regex.Replace(input, @"\[[^\]]*\]", "").Trim();
+    }
+    private string GetRandomLyricSection(string lyrics)
+    {
+        // Split the lyrics into sections
+        var sections = lyrics.Split(new string[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+        // Select a random section
+        var random = new Random();
+        var randomIndex = random.Next(sections.Length);
+        return sections[randomIndex];
     }
 
 }

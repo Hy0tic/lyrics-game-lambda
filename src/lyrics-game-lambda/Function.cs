@@ -35,9 +35,10 @@ public partial class Function
         
 
         return new {
-            randomSong.Album,
-            randomSong.Name,
-            randomTitles
+            album = randomSong.Album,
+            title = randomSong.Name,
+            quote = randomSong.Lyrics,
+            choices = randomTitles
         };
 
     }
