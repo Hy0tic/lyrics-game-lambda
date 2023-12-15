@@ -16,11 +16,11 @@ public partial class Function
     /// <param name="input"></param>
     /// <param name="context"></param>
     /// <returns></returns>
-    public string FunctionHandler(ILambdaContext context)
+    public object FunctionHandler(ILambdaContext context)
     {
         var excelRepo = _serviceProvider.GetRequiredService<ExcelSongRepository>();
         var result = excelRepo.GetRandomSongTitle();
-        return result;
+        return new {result};
 
     }
 }
