@@ -20,7 +20,7 @@ public partial class Function
     {
         var excelRepo = _serviceProvider.GetRequiredService<ExcelSongRepository>();
         var result = excelRepo.GetRandomSongTitle();
-        return new {result}.ToString();
+        return result;
 
     }
 }
