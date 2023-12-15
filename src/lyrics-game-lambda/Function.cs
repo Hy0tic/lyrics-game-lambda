@@ -16,11 +16,29 @@ public partial class Function
     /// <param name="input"></param>
     /// <param name="context"></param>
     /// <returns></returns>
-    public string FunctionHandler(ILambdaContext context)
+    public async Task<Object> FunctionHandler(ILambdaContext context)
     {
         var excelRepo = _serviceProvider.GetRequiredService<ExcelSongRepository>();
         var result = excelRepo.GetRandomSongTitle();
-        return result;
+
+        var randomSong = excelRepo.GetRandomSong();
+
+        var randomTitles = new List<string>
+        {
+            excelRepo.GetRandomSongTitle(),
+            excelRepo.GetRandomSongTitle(),
+            excelRepo.GetRandomSongTitle(),
+            randomSong.Name
+        }
+            .OrderBy(x => Random.Shared.Next())
+            .ToList();
+        
+
+        return new {
+            randomSong.Album,
+            randomSong.Name,
+            randomTitles
+        };
 
     }
 }
