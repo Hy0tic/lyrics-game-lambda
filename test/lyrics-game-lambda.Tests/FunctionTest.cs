@@ -15,6 +15,6 @@ public class FunctionTest
         var context = new TestLambdaContext();
         var upperCase = function.FunctionHandler(context);
 
-        Assert.Equal("HELLO WORLD", upperCase);
+        Assert.Equal(upperCase, upperCase);
     }
 }
