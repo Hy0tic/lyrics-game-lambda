@@ -18,7 +18,7 @@ public partial class Function
     /// <returns></returns>
     public async Task<Object> FunctionHandler(ILambdaContext context)
     {
-        var excelRepo = _serviceProvider.GetRequiredService<ExcelSongRepository>();
+        var excelRepo = ServiceProvider.GetRequiredService<ExcelSongRepository>();
         var result = excelRepo.GetRandomSongTitle();
 
         var randomSong = excelRepo.GetRandomSong();

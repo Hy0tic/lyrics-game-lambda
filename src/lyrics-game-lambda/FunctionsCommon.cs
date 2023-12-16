@@ -5,13 +5,13 @@ namespace lyrics_game_lambda;
 
 public partial class Function
 {
-    private IServiceProvider _serviceProvider { get; set; }
-    private IConfiguration _configuration { get; set; }
+    private IServiceProvider ServiceProvider { get; set; }
+    private IConfiguration Configuration { get; set; }
     
     public Function()
     {
         var services = new ServiceCollection();
-        _serviceProvider = services
+        ServiceProvider = services
             .ConfigureServices()
             .BuildServiceProvider();
     }
