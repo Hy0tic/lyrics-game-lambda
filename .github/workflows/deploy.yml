@@ -40,4 +40,13 @@ jobs:
       run: |
         cd src/lyrics-game-lambda
         dotnet lambda deploy-function lyrics-game-lambda --function-role ${{ secrets.AWS_LAMBDA_ARN }} --region ${{ secrets.AWS_REGION }}
+
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v1
+
+    - name: Terraform init
+      run: |
+        cd terraform
+        terraform init
+        terraform plan
   
