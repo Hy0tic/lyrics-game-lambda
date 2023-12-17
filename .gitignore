@@ -7,3 +7,5 @@ obj
 .terraform
 .terraform.lock.hcl
 terraform.tfstate
+
+lyrics-game-lambda.sln.DotSettings.user

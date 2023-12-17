@@ -21,11 +21,12 @@ jobs:
       with:
         dotnet-version: '6.x'
 
-    - name: Build and Package Lambda
+    - name: Build, Test, and Package Lambda
       run: |
         dotnet tool restore
         dotnet restore
         dotnet build --configuration Release
+        dotnet test
         cd src/lyrics-game-lambda
         dotnet lambda package
 
