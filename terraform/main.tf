@@ -4,9 +4,18 @@ terraform {
         source = "hashicorp/aws",
         version =  "~> 5.31"
     }
+
   }
 
   required_version = ">= 1.2.0"
+
+    backend "s3" {
+        bucket         	   = "lyrics-game-terraform-state-bucket"
+        key                = "state/terraform.tfstate"
+        region         	   = "us-east-1"
+        encrypt        	   = true
+        # dynamodb_table     = "mycomponents_tf_lockid"
+    }
 }
 
 provider "aws" {
@@ -41,3 +50,4 @@ resource "aws_lambda_function" "lyrics_game_lambda" {
         mode = "PassThrough"
     }
 }
+
