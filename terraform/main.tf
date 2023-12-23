@@ -50,3 +50,20 @@ resource "aws_lambda_function" "lyrics_game_lambda" {
     }
 }
 
+resource "aws_api_gateway_rest_api" "lyrics_game_api" {
+    api_key_source               = "HEADER"
+    binary_media_types           = []
+    disable_execute_api_endpoint = false
+    name                         = "lyrics-game-api"
+    put_rest_api_mode            = "overwrite"
+    tags                         = {}
+    tags_all                     = {}
+
+    endpoint_configuration {
+        types            = [
+            "REGIONAL",
+        ]
+        # vpc_endpoint_ids = []
+    }
+}
+
