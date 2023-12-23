@@ -36,7 +36,6 @@ resource "aws_lambda_function" "lyrics_game_lambda" {
     role                           = "arn:aws:iam::915898657279:role/service-role/lyrics-game-lambda-role-5enu4vjm"
     runtime                        = "dotnet6"
     skip_destroy                   = false
-    source_code_hash               = "RsNuSKTTq+wqxzv10l4qvtn0Az2bubmkkjGh5+1/YH8="
     tags                           = {}
     tags_all                       = {}
     timeout                        = 30
