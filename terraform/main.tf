@@ -39,7 +39,7 @@ resource "aws_lambda_function" "lyrics_game_lambda" {
     tags                           = {}
     tags_all                       = {}
     timeout                        = 30
-    filename                       = "./publish/lyrics-game-lambda.zip"
+    filename                       = "../src/lyrics-game-lambda/bin/Release/net6.0/lyrics-game-lambda.zip"
 
     ephemeral_storage {
         size = 512
