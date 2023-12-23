@@ -4,8 +4,10 @@ obj
 .idea/**
 .vs
 
-.terraform
-.terraform.lock.hcl
-terraform.tfstate
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
 
 lyrics-game-lambda.sln.DotSettings.user
