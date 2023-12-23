@@ -11,6 +11,8 @@ terraform {
 
 provider "aws" {
     region  = "us-east-1"
+    access_key = "AKIA5KP6QNH7ZR2PLOXA"
+    secret_key = "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"
 }
 
 
@@ -21,5 +23,5 @@ resource "aws_lambda_function" "lyrics_game_lambda" {
     handler = "lyrics-game-lambda::lyrics_game_lambda.Function::FunctionHandler"
     memory_size      = 256
     timeout          = 30
-    filename = "../src/lyrics-game-lambda/Release/net6.0/lyrics-game-lambda.zip"
+    filename = "../src/lyrics-game-lambda/bin/Release/net6.0/lyrics-game-lambda.zip"
 }
