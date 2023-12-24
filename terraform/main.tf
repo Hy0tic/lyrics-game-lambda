@@ -97,6 +97,6 @@ resource "aws_api_gateway_integration" "lambda_gateway_integration"{
     request_parameters      = {}
     request_templates       = {}
     timeout_milliseconds    = 29000
-    uri                     = "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:915898657279:function:lyrics-game-lambda/invocations"
+    uri                     = aws_lambda_function.lyrics_game_lambda.invoke_arn
 
 }
