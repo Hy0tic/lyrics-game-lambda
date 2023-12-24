@@ -63,7 +63,40 @@ resource "aws_api_gateway_rest_api" "lyrics_game_api" {
         types            = [
             "REGIONAL",
         ]
-        # vpc_endpoint_ids = []
     }
 }
 
+resource "aws_api_gateway_resource" "get_resource" {
+  rest_api_id = aws_api_gateway_rest_api.lyrics_game_api.id
+  parent_id   = aws_api_gateway_rest_api.lyrics_game_api.root_resource_id
+  path_part   = "get"  // The path for this resource
+}
+
+resource "aws_api_gateway_method" "get_any"{
+    rest_api_id = aws_api_gateway_rest_api.lyrics_game_api.id
+    authorization = "NONE"
+    resource_id = aws_api_gateway_resource.get_resource.id
+    http_method = "ANY"
+}
+
+resource "aws_api_gateway_method" "get_option"{
+    rest_api_id = aws_api_gateway_rest_api.lyrics_game_api.id
+    authorization = "NONE"
+    resource_id = aws_api_gateway_resource.get_resource.id
+    http_method = "OPTIONS"
+}
+
+resource "aws_api_gateway_integration" "lambda_gateway_integration"{
+    content_handling        = "CONVERT_TO_TEXT"
+    rest_api_id             = aws_api_gateway_rest_api.lyrics_game_api.id
+    resource_id             = aws_api_gateway_resource.get_resource.id
+    type                    = "AWS"
+    http_method             = "ANY"
+    integration_http_method = "POST"
+    passthrough_behavior    = "WHEN_NO_MATCH"
+    request_parameters      = {}
+    request_templates       = {}
+    timeout_milliseconds    = 29000
+    uri                     = "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:915898657279:function:lyrics-game-lambda/invocations"
+
+}
